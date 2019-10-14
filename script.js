@@ -1,7 +1,7 @@
 const hexNumbers = [0,1,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
 
 const hexBtn = document.querySelector('.hexBtn');
-const bodyBcg = document.querySelector('body');
+const newColor = document.querySelector('.square');
 const hex = document.querySelector('.hex');
 
 hexBtn.addEventListener('click', getHex);
@@ -17,6 +17,7 @@ function getHex(){
         hexCol += hexNumbers[random];
     }
 
-    bodyBcg.style.backgroundColor = hexCol;
+    newColor.style.backgroundColor = hexCol;
+    hex.style.color=hexCol;
     hex.innerHTML = hexCol;
 }
